@@ -1,168 +1,223 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="HEMI: Tutorial on Human-centric Embodied Multimodal Interaction in conjunction with ICMI 2026.">
-    <title>HEMI | Human-centric Embodied Multimodal Interaction</title>
-    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
-    <link rel="stylesheet" href="assets/styles.css">
-    <script src="assets/site.js" defer></script>
-  </head>
-  <body>
-    <header class="site-header">
-      <div class="container header-row">
-        <a class="brand" href="index.html" aria-label="HEMI homepage">
-          <span class="brand-mark">HEMI</span>
-          <span class="brand-text">Human-centric Embodied Multimodal Interaction<small>ICMI 2026 Tutorial</small></span>
-        </a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav">Menu</button>
-        <nav class="site-nav" id="nav" aria-label="Primary">
-          <a href="index.html" aria-current="page">Home</a>
-          <a href="about.html">About</a>
-          <a href="agenda.html">Agenda</a>
-          <a href="organizers.html">Organizers</a>
-          <a href="materials.html">Materials</a>
-        </nav>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>HEMI — Tutorial on Human-centric Embodied Multimodal Interaction · ICMI 2026</title>
+<meta name="description" content="Tutorial on Human-centric Embodied Multimodal Interaction (HEMI), in conjunction with ICMI 2026, Naples. The page is coming soon.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#EAE8E0;
+    --sheet:#FCFCFA;
+    --ink:#141A20;
+    --soft:#5C6670;
+    --faint:#8A9299;
+    --rule:#E3E1D8;
+    --sea:#1C4E75;
+    --ochre:#B07D1A;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--ink);
+    font-family:"Inter",Helvetica,Arial,sans-serif;
+    font-size:17px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+    display:flex;
+    justify-content:center;
+    padding:clamp(0px,4vw,56px) clamp(0px,4vw,32px);
+  }
+
+  /* the sheet */
+  main{
+    width:100%;
+    max-width:780px;
+    background:var(--sheet);
+    border:1px solid var(--rule);
+    box-shadow:0 1px 2px rgba(20,26,32,.04),0 12px 32px -12px rgba(20,26,32,.16);
+    overflow:hidden;
+    animation:rise .6s cubic-bezier(.2,.7,.3,1) both;
+  }
+  @keyframes rise{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+
+  /* majolica band — a nod to the Neapolitan tilework */
+  .tiles{
+    height:9px;
+    background:
+      repeating-linear-gradient(135deg,
+        var(--sea) 0 6px, transparent 6px 12px),
+      repeating-linear-gradient(45deg,
+        var(--ochre) 0 6px, var(--sheet) 6px 12px);
+    opacity:.85;
+  }
+
+  .inner{padding:clamp(34px,6vw,60px) clamp(26px,6vw,64px) clamp(34px,5vw,52px);}
+
+  /* masthead */
+  .eyebrow{
+    display:flex;align-items:center;gap:12px;
+    font-size:12.5px;font-weight:600;
+    letter-spacing:.16em;text-transform:uppercase;
+    color:var(--sea);
+    margin:0 0 22px;
+  }
+  .eyebrow::after{
+    content:"";flex:1;height:1px;background:var(--rule);
+  }
+
+  h1{
+    font-family:"Fraunces","Georgia",serif;
+    font-variation-settings:"opsz" 96,"SOFT" 0,"WONK" 0;
+    font-weight:600;
+    font-size:clamp(30px,5.4vw,46px);
+    line-height:1.12;
+    letter-spacing:-.018em;
+    margin:0;
+    max-width:16ch;
+    text-wrap:balance;
+  }
+
+  .lockup{
+    display:flex;align-items:baseline;gap:14px;flex-wrap:wrap;
+    margin:20px 0 0;
+  }
+  .mark{
+    font-family:"Fraunces",Georgia,serif;
+    font-weight:700;font-size:15px;letter-spacing:.22em;
+    color:var(--sheet);background:var(--sea);
+    padding:3px 12px 4px;border-radius:2px;
+  }
+  .lockup em{
+    font-style:italic;color:var(--soft);font-size:16.5px;
+    font-family:"Fraunces",Georgia,serif;
+  }
+
+  /* coming soon */
+  .soon{
+    margin:clamp(30px,5vw,44px) 0 clamp(28px,4vw,38px);
+    padding:18px 0 18px 22px;
+    border-left:3px solid var(--ochre);
+    font-family:"Fraunces",Georgia,serif;
+    font-variation-settings:"opsz" 20;
+    font-size:clamp(20px,3.2vw,25px);
+    line-height:1.35;
+    color:var(--ink);
+  }
+
+  /* details */
+  dl{margin:0;border-top:1px solid var(--rule);}
+  dl > div{
+    display:grid;
+    grid-template-columns:132px 1fr;
+    gap:8px 24px;
+    padding:18px 0;
+    border-bottom:1px solid var(--rule);
+  }
+  dt{
+    font-size:12px;font-weight:600;
+    letter-spacing:.14em;text-transform:uppercase;
+    color:var(--faint);
+    padding-top:5px;
+  }
+  dd{margin:0;color:var(--soft);}
+  dd .lead{
+    display:block;color:var(--ink);font-weight:500;
+    font-size:18px;
+  }
+  dd .sub{font-size:15.5px;}
+
+  .people{display:flex;flex-wrap:wrap;gap:6px 18px;}
+  .people a{
+    color:var(--ink);text-decoration:none;
+    border-bottom:1px solid var(--rule);
+    padding-bottom:1px;
+    transition:border-color .18s ease,color .18s ease;
+  }
+  .people a::after{
+    content:"↗";font-size:.72em;color:var(--faint);
+    margin-left:4px;vertical-align:1px;
+    transition:color .18s ease;
+  }
+  .people a:hover,.people a:focus-visible{color:var(--sea);border-color:var(--sea);}
+  .people a:hover::after,.people a:focus-visible::after{color:var(--sea);}
+
+  .mail{
+    font-family:ui-monospace,SFMono-Regular,Menlo,monospace;
+    font-size:15px;color:var(--ink);
+    background:#F2F4F2;border:1px solid var(--rule);
+    padding:2px 9px;border-radius:2px;
+  }
+
+  a:focus-visible{outline:2px solid var(--sea);outline-offset:3px;border-radius:1px;}
+
+  @media (max-width:560px){
+    main{border-left:none;border-right:none;}
+    dl > div{grid-template-columns:1fr;gap:4px;padding:16px 0;}
+    dt{padding-top:0;}
+  }
+
+  @media (prefers-reduced-motion:reduce){
+    main{animation:none;}
+    *{transition:none !important;}
+  }
+</style>
+</head>
+<body>
+
+<main>
+  <div class="tiles" aria-hidden="true"></div>
+
+  <div class="inner">
+
+    <p class="eyebrow">Tutorial &middot; ICMI 2026</p>
+
+    <h1>Human-centric Embodied Multimodal Interaction</h1>
+
+    <p class="lockup">
+      <span class="mark">HEMI</span>
+      <em>in conjunction with ICMI&rsquo;26, Naples</em>
+    </p>
+
+    <p class="soon">The page is coming soon.</p>
+
+    <dl>
+      <div>
+        <dt>Date</dt>
+        <dd>
+          <span class="lead">Monday, 5 October &middot; 08:30&ndash;12:30</span>
+          <span class="sub">Tutorial #1 (HEMI)</span>
+        </dd>
       </div>
-    </header>
-
-    <main>
-      <section class="hero">
-        <div class="container hero-grid">
-          <div>
-            <span class="eyebrow">In conjunction with ICMI 2026</span>
-            <h1>Human-centric Embodied Multimodal Interaction</h1>
-            <p class="lead">An interdisciplinary tutorial on enabling embodied agents to perceive, clarify, personalize, and safely collaborate with humans in the shared physical world.</p>
-            <div class="actions">
-              <a class="button" href="agenda.html">Explore the program</a>
-              <a class="button secondary" href="materials.html">Supporting material</a>
-            </div>
-          </div>
-          <div class="hero-art" aria-hidden="true">
-            <span class="orb one"></span>
-            <span class="orb two"></span>
-            <div class="art-card">
-              <strong>From perception to trust</strong>
-              <div class="signal"><span>01</span>Perceive and reason</div>
-              <div class="signal"><span>02</span>Interact proactively</div>
-              <div class="signal"><span>03</span>Personalize safely</div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="fact-strip" aria-label="Tutorial facts">
-        <div class="container facts">
-          <div class="fact"><span class="fact-label">Day</span><span class="fact-value">Half-day tutorial</span></div>
-          <div class="fact"><span class="fact-label">Time</span><span class="fact-value">09:00 - 12:30</span></div>
-          <div class="fact"><span class="fact-label">Room</span><span class="fact-value">3 expert sessions</span></div>
-        </div>
-      </section>
-
-      <section class="section tint" id="theme">
-        <div class="container">
-          <div class="section-heading">
-            <div>
-              <span class="eyebrow">Theme</span>
-              <h2>Embodied AI built around people</h2>
-            </div>
-            <p>HEMI bridges vision-language representation, human-agent interaction, and social sciences for trustworthy agents in dynamic real-world environments.</p>
-          </div>
-          <div class="cards">
-            <article class="card">
-              <span class="number">01</span>
-              <h3>Perception &amp; Reasoning</h3>
-              <p>Fuse visual, spatial, and linguistic input to understand physical environments and identify uncertainty.</p>
-            </article>
-            <article class="card">
-              <span class="number">02</span>
-              <h3>Proactive Interaction</h3>
-              <p>Use verbal and non-verbal cues to clarify ambiguous intent and prevent risks during action.</p>
-            </article>
-            <article class="card">
-              <span class="number">03</span>
-              <h3>Personalized Interaction</h3>
-              <p>Adapt agent behavior and communication styles to situated context and individual preferences.</p>
-            </article>
-          </div>
-          <p class="more-link"><a class="link" href="about.html">Read about the tutorial and its relevance to ICMI &rarr;</a></p>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="section-heading">
-            <div>
-              <span class="eyebrow">Learning Objectives</span>
-              <h2>What attendees will take away</h2>
-            </div>
-            <a class="link" href="about.html">View objectives &rarr;</a>
-          </div>
-          <div class="objective-grid">
-            <div class="objective"><strong>Embodied perception methods</strong><p>Understand how MLLMs and VLAs ground multimodal input.</p></div>
-            <div class="objective"><strong>Proactive strategies</strong><p>Resolve ambiguity through appropriate human-agent dialogue.</p></div>
-            <div class="objective"><strong>MLLM personalization</strong><p>Tailor behavior, action, and communication to users.</p></div>
-            <div class="objective"><strong>Social signals</strong><p>Bring gaze, posture, and gestures into embodied AI.</p></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section tint">
-        <div class="container">
-          <div class="section-heading">
-            <div>
-              <span class="eyebrow">Agenda</span>
-              <h2>Tentative half-day schedule</h2>
-            </div>
-            <a class="link" href="agenda.html">Full program &rarr;</a>
-          </div>
-          <div class="timeline">
-            <div class="session"><time>09:10 - 10:00</time><span class="speaker">Alessandro Vinciarelli</span><span class="topic">Multimodal Social AI</span></div>
-            <div class="session"><time>10:30 - 11:20</time><span class="speaker">Davide Talon</span><span class="topic">Personalized human-agent interaction with MLLMs</span></div>
-            <div class="session"><time>11:20 - 12:10</time><span class="speaker">Yiming Wang</span><span class="topic">Embodied perception and reasoning in human-centric environments</span></div>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container">
-          <div class="section-heading">
-            <div>
-              <span class="eyebrow">Organizers</span>
-              <h2>Meet the speakers</h2>
-            </div>
-            <a class="link" href="organizers.html">Biographies &amp; publications &rarr;</a>
-          </div>
-          <div class="people">
-            <article class="person"><img class="person-avatar" src="assets/yiming.jpg" alt="Profile placeholder for Yiming Wang"><div class="person-tag">FBK, Italy</div><h3>Yiming Wang</h3><p>Embodied perception, semantic understanding, and navigation/manipulation.</p></article>
-            <article class="person"><img class="person-avatar" src="assets/davide.jpg" alt="Profile placeholder for Davide Talon"><div class="person-tag">FBK, Italy</div><h3>Davide Talon</h3><p>Multimodal learning, vision-language model adaptation, and human-AI interaction.</p></article>
-            <article class="person"><img class="person-avatar" src="assets/alessandro.jpg" alt="Profile placeholder for Alessandro Vinciarelli"><div class="person-tag">University of Glasgow</div><h3>Alessandro Vinciarelli</h3><p>Computational Social Intelligence and social signal processing.</p></article>
-          </div>
-        </div>
-      </section>
-
-      <section class="section">
-        <div class="container resource-panel">
-          <div>
-            <span class="eyebrow">Supporting Material</span>
-            <h2>Resources for the community</h2>
-            <p>This site is the central hub for supporting material.</p>
-            <a class="link" href="materials.html">Access resources &rarr;</a>
-          </div>
-          <div class="resource-list">
-            <div class="resource-item"><strong>Reading List</strong></div>
-            <div class="resource-item"><strong>Slides</strong></div>
-            <div class="resource-item"><strong>Post-tutorial summary</strong>TBD</div>
-          </div>
-        </div>
-      </section>
-    </main>
-
-    <footer class="site-footer">
-      <div class="container footer-row">
-        <span>HEMI Tutorial &middot; ICMI 2026</span>
+      <div>
+        <dt>Location</dt>
+        <dd>
+          <span class="lead">Royal Continental Hotel</span>
+          <span class="sub">Via Partenope 38, Naples</span>
+        </dd>
       </div>
-    </footer>
-  </body>
+      <div>
+        <dt>Organizers</dt>
+        <dd class="people">
+          <a href="https://www.yimingwang.me/">Yiming Wang</a>
+          <a href="https://davidetalon.github.io/">Davide Talon</a>
+          <a href="https://vinciarelli.net/">Alessandro Vinciarelli</a>
+        </dd>
+      </div>
+      <div>
+        <dt>Contact</dt>
+        <dd><span class="mail">ywang AT fbk DOT eu</span></dd>
+      </div>
+    </dl>
+
+  </div>
+</main>
+
+</body>
 </html>
