@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-labelledby="title">
+  <title id="title">Illustrated profile placeholder</title>
+  <path fill="#382422" d="M274 20C206-14 139 1 103 41 60 89 41 127 51 166c8 31 28 47 55 46-14-25-10-40-1-55 3 42 27 54 48 40l16-23 60-97c13-22 34-35 54-34 21 1 38 13 40 29 1 67 13 108 53 113 7-35 38-49 60-37 30 15 34 72 4 98-10 9-20 13-30 13-7 55-35 100-77 126-13 8-27 14-41 18l2 35c40 7 94 19 121 42 22 19 33 55 35 85H42c2-33 15-64 35-83 26-24 78-37 119-45l4-44c-47-19-75-63-84-121l-3-36c-30 5-54-14-61-45-11-46 7-89 60-142 44-44 106-56 162-31z"/>
+  <path fill="#ffaca0" d="M283 75c-22-5-40 7-54 31l-59 100c-11 19-28 31-47 27l1 36c9 67 44 113 99 127 51 13 101-5 129-41 24-31 37-68 39-111 7 2 15 1 23-3 25-14 28-67 0-84-25-15-57 3-61 38-38-5-51-48-50-120-6 1-12 1-20 0z"/>
+  <path fill="#ffaca0" d="M198 386l-6 53c-2 22 11 37 37 37h27c32 0 50-14 55-39l5-53c-36 20-76 22-118 2z"/>
+  <path fill="#f17a70" d="M199 386c40 20 80 18 117-2l3-37c-25 26-54 42-91 48-10 1-20 1-29-1z"/>
+  <path d="M151 188c18-17 39-17 57 0" stroke="#382422" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <path d="M258 181c18-10 37-10 52 0" stroke="#382422" stroke-width="7" stroke-linecap="round" fill="none"/>
+  <ellipse cx="180" cy="211" rx="12" ry="18" fill="#382422"/>
+  <ellipse cx="280" cy="207" rx="12" ry="18" fill="#382422"/>
+  <path d="M208 228l-24 42 31 9" fill="none" stroke="#f27870" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M195 307c26 4 51-1 75-13" fill="none" stroke="#f64c50" stroke-width="7" stroke-linecap="round"/>
+  <path d="M366 223c-5-23 8-39 22-38 13 1 17 11 17 11m-34 42c12 0 19-7 19-18 0-10-7-14-15-14" fill="none" stroke="#f27870" stroke-width="7" stroke-linecap="round"/>
+</svg>
